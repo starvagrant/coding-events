@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html en="lang" xlmns:th="http://www.thymeleaf.org/">
+<head th:fragment="header">
+    <meta character="UTF-8"/>
+    <title>Coding Events</title>
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<nav th:fragment="navigation">
+    <ul>
+       <a href="/events">All Events</a>
+        <a href="/events/create">Create</a>
+    </ul>
+</nav>
+
+<td th:fragment="address">1101 Strange Loop, Kansas City KS 64140</td>
+</body>
+</html>
