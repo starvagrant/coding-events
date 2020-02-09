@@ -17,15 +17,12 @@ public class EventController {
 
     @GetMapping
     public String displayAllEvents(Model model) {
-        Map<String, String> events = new HashMap<>();
-        events.put("Kansas Linux Fest", "Annual Kansas Linux Conference");
-        events.put("Java Users Group", "Monthly Java Meetup");
-        events.put("Strange Loop", "Yearly St. Louis Tech Conference");
         List<ProgrammingEvent> eventList = new ArrayList<>();
-        for(String key : events.keySet()) {
-            eventList.add(new ProgrammingEvent(key, events.get(key)));
-        }
+        eventList.add(new ProgrammingEvent("Kansas Linux Fest", "Annual Kansas Linux Conference", "klf200.jpg"));
+        eventList.add(new ProgrammingEvent("Java Users Group", "Monthly Java Meetup", "jug200.png"));
+        eventList.add(new ProgrammingEvent("Strange Loop", "Yearly St. Louis Tech Conference", "sl200.jpg"));
         model.addAttribute("events", eventList);
+
 
         return "events/index";
     }

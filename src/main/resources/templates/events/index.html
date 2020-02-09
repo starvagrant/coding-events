@@ -2,7 +2,7 @@
 <html en="lang" xlmns:th="http://www.thymeleaft.org/">
 <head th:replace="fragments :: header"></head>
 <body class="container">
-    <table>
+    <table class="table table-striped">
         <thead>
             <tr>
                 <th>Name</th>
@@ -10,6 +10,7 @@
             </tr>
         </thead>
             <tr th:each="event : ${events}">
+                    <td><img th:src="@{/{url}(url=${event.imageUrl})}" /></td>
                     <td th:text="${event.name}"></td>
                     <td th:text="${event.description}"></td>
                     <td th:replace="fragments :: address"></td>
